@@ -55,14 +55,14 @@
             "path-template": "[bidspath]/derivatives/surfaceanalysis/[subject].lh.[seedmasks].tsv",
             "optional": false,
             "id": "distance_lh",
-            "path-template-stripped-extensions": ".tsv",
+            "path-template-stripped-extensions": [".tsv"],
             "name": "LH distance maps in tsv format"
         },
         {
             "path-template": "[bidspath]/derivatives/surfaceanalysis/[subject].rh.[seedmasks].tsv",
             "optional": false,
             "id": "distance_rh",
-            "path-template-stripped-extensions": ".tsv",
+            "path-template-stripped-extensions": [".tsv"],
             "name": "RH distance maps in tsv format"
         }
     ],
