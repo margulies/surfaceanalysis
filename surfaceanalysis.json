@@ -1,0 +1,61 @@
+{
+    "tool-version": "dev",
+    "name": "surfaceanalysis",
+    "command-line": "python /opt/surfaceanalysis.py [bidspath] [subject] [param1] [flag]",
+    "inputs": [
+        {
+            "value-key": "[bidspath]",
+            "optional": false,
+            "type": "String",
+            "id": "bids_path",
+            "name": "Path to bids directory"
+        },
+        {
+            "value-key": "[subject]",
+            "optional": false,
+            "type": "File",
+            "id": "subject_id",
+            "name": "Subject name or something more correct"
+        },
+        {
+            "value-key": "[param1]",
+            "optional": false,
+            "type": "Number",
+            "id": "numeric_value",
+            "name": "Some threshold or parameter",
+						"minimum": 0,
+						"maximum": 100
+        },
+        {
+            "command-line-flag": "-f",
+            "name": "Some flag",
+            "value-key": "[flag]",
+            "type": "Flag",
+            "optional": true,
+            "id": "myflag"
+        }
+    ],
+    "container-image": {
+        "index": "index.docker.io",
+        "image": "margulies/surfaceanalysis:dev",
+        "type": "docker"
+    },
+    "schema-version": "0.5",
+    "groups": [],
+    "output-files": [
+        {
+            "path-template": "[bidspath]/outputs/[subject]_surface.obj",
+            "optional": true,
+            "id": "subject_surface",
+            "path-template-stripped-extensions": [
+                ".nii.gz",
+                ".nii"
+            ],
+            "name": "Some surface or something :)"
+        }
+    ],
+    "suggested-resources": {
+        "walltime-estimate": 3600
+    },
+    "description": "Surface analysis"
+}
