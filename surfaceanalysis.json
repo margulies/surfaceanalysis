@@ -8,7 +8,9 @@
             "value-key": "[subject]",
             "optional": false,
             "type": "String",
+            "list": true,
             "id": "subject_id",
+            "command-line-flag": "--participant_label",
             "name": "Subject name or something more correct"
         },
         {
@@ -16,6 +18,7 @@
             "optional": false,
             "type": "String",
             "id": "freesurfer_path",
+            "command-line-flag": "--freesurfer_dir",
             "name": "Path to bids directory"
         },
         {
@@ -50,13 +53,17 @@
     "output-files": [
         {
             "path-template": "[bidspath]/derivatives/surfaceanalysis/[subject].lh.[seedmasks].tsv",
-            "optional": true,
-            "id": "subject_surface",
-            "path-template-stripped-extensions": [
-                ".nii.gz",
-                ".nii"
-            ],
-            "name": "Distance maps in tsv format"
+            "optional": false,
+            "id": "distance_lh",
+            "path-template-stripped-extensions": ".tsv",
+            "name": "LH distance maps in tsv format"
+        },
+        {
+            "path-template": "[bidspath]/derivatives/surfaceanalysis/[subject].rh.[seedmasks].tsv",
+            "optional": false,
+            "id": "distance_rh",
+            "path-template-stripped-extensions": ".tsv",
+            "name": "RH distance maps in tsv format"
         }
     ],
     "suggested-resources": {
