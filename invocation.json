@@ -1,0 +1,7 @@
+{
+  "bids_path": "data",
+  "freesurfer_path": "data/freesurfer",
+  "out_dir": "data",
+  "subject_id": "0001",
+  "seed_masks": "S_central"
+}
