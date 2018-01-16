@@ -1,7 +1,7 @@
 {
     "tool-version": "dev",
     "name": "surfaceanalysis",
-    "command-line": "python /opt/surfaceanalysis.py [subject] [freesurferpath] [seedmasks] [bidspath] [outdir]",
+    "command-line": "python /opt/surfaceanalysis.py [bidspath] [outdir] [freesurferpath] [seedmasks] [subject]",
     "inputs": [
 
         {
@@ -23,7 +23,9 @@
         },
         {
             "value-key": "[seedmasks]",
+            "command-line-flag": "--seed_masks",
             "optional": false,
+            "list": true,
             "type": "String",
             "id": "seed_masks",
             "name": "Seed regions for distance analysis"
