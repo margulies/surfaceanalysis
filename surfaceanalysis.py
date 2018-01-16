@@ -7,7 +7,6 @@ import pandas as pd
 import os, sys
 import surfdist as sd
 from surfdist import viz, load, utils, surfdist
-from bids.grabbids import BIDSLayout
 from pkg_resources import resource_filename, Requirement
 
 def surf_analysis(base_dir, out_dir, subject_label="", region=""):
@@ -52,11 +51,6 @@ if __name__ == "__main__":
                                                  "cannot be found, recon-all will be run. "
                                                  "If not specified freesurfer data will be saved to {"
                                                  "out_dir}/freesurfer")
-    parser.add_argument('--license_key',
-                        help='FreeSurfer license key - letters and numbers after "*" in the email you '
-                             'received after registration. To register (for free) visit '
-                             'https://surfer.nmr.mgh.harvard.edu/registration.html',
-                        required=True)
     parser.add_argument('--seed_masks',
                         help='List of freesurfer label names, e.g., S_central',
                         required=True)

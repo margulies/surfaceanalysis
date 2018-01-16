@@ -1,7 +1,7 @@
 {
     "tool-version": "dev",
     "name": "surfaceanalysis",
-    "command-line": "python /opt/surfaceanalysis.py [subject] [freesurferpath] [licensekey] [seedmasks] [bidspath] [outdir]",
+    "command-line": "python /opt/surfaceanalysis.py [subject] [freesurferpath] [seedmasks] [bidspath] [outdir]",
     "inputs": [
 
         {
@@ -17,13 +17,6 @@
             "type": "String",
             "id": "freesurfer_path",
             "name": "Path to bids directory"
-        },
-        {
-            "value-key": "[licensekey]",
-            "optional": false,
-            "type": "File",
-            "id": "license_key",
-            "name": "Freesurfer license key"
         },
         {
             "value-key": "[seedmasks]",

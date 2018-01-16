@@ -7,6 +7,7 @@ RUN apt-get install -y python-pip
 
 ENV MYVAR mything
 
-RUN pip install boutiques
+RUN pip install numpy boutiques nibabel pandas cython
+RUN pip install surfdist
 
 COPY surfaceanalysis.py /opt/surfaceanalysis.py
