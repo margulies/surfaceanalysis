@@ -1,6 +1,6 @@
 # How to go from a local python script to cbrain
 
-If you would like to run your own pipeline on the cbrain platform, follow the following steps:
+If you would like to run your own pipeline on the [cbrain platform](https://portal.cbrain.mcgill.ca), follow the following steps:
 
 ## 1. Begin by creating a working python script
 
@@ -91,4 +91,4 @@ Then test on the command line:
 
 ## 6. Deploy on cbrain
 
-Send an email to the fine folks at cbrain with the link to your repository as well as a link to example data.
+Send an email to the fine folks at [cbrain](https://portal.cbrain.mcgill.ca) with the link to your repository as well as a link to example data.
