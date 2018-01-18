@@ -12,7 +12,21 @@ Write a pipeline in python that will take variables, such as `participant_label`
 
 ## 2. Run python script using docker
 
-Begin by writing a `dockerfile`.
+Begin by writing a `dockerfile`:
+
+    FROM ubuntu:16.04
+    MAINTAINER Daniel Margulies <daniel.margulies@gmail.com>
+
+    RUN apt-get update
+    RUN apt-get install -y python-dev
+    RUN apt-get install -y python-pip
+
+    ENV MYVAR mything
+
+    RUN pip install numpy boutiques nibabel pandas cython
+    RUN pip install surfdist
+
+    COPY surfaceanalysis.py /opt/surfaceanalysis.py
 
 Then build the docker image:
 
@@ -38,6 +52,12 @@ When it's ready to go, push the dockerfile to dockerhub:
 Now you're ready to build the boutique portion for deploying your docker image on cbrain.
 
 ## 3. Create a boutique .json file with command line specifications
+
+For more information on boutiques, see the following  [tutorial](https://github.com/boutiques/boutiques/blob/master/examples/Getting%20Started%20with%20Boutiques.ipynb).
+
+To install:
+
+    pip install boutiques
 
 Create a `.json` file that specifies how to use your python script on the command line.
 
