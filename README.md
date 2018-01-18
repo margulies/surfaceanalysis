@@ -71,11 +71,21 @@ The following command will output an example command with random options. Use th
 
 ### Create example input file
 
-Create an `invocation.json` file that includes actual command line parameters and test:
+Create an `invocation.json` file that includes actual command line parameters and test. For example:
+
+    {
+      "bids_path": "data",
+      "freesurfer_path": "data/freesurfer",
+      "out_dir": "data",
+      "subject_id": "0001",
+      "seed_masks": "S_central"
+    }
+
+Then test on the command line:
 
     bosh exec simulate surfaceanalysis.json -i invocation.json
 
-### Test scripts locally
+### Test scripts locally:
 
     bosh exec launch surfaceanalysis.json invocation.json
 
